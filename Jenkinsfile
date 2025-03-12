@@ -6,7 +6,7 @@ pipeline {
             steps {
                 echo 'Building the application...'
                 sh '''
-                    g++ -o PES2UG22CS040-1 main.cpp
+                    g++ -o PES2UG22CS036-1 error.cpp
                     echo "Build completed successfully"
                 '''
             }
@@ -16,7 +16,7 @@ pipeline {
             steps {
                 echo 'Testing the application...'
                 sh '''
-                    ./PES2UG22CS040-1
+                    ./PES2UG22CS036-1
                     echo "Testing completed successfully"
                 '''
             }
@@ -32,7 +32,7 @@ pipeline {
         }
     }
     
-    post {
+    post
         failure {
             echo 'Pipeline failed!'
         }
